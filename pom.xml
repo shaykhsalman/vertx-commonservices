@@ -5,26 +5,28 @@
   <groupId>com.fairbit</groupId>
   <artifactId>CommonServices</artifactId>
   <version>1.0-1</version>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
   <packaging>jar</packaging>
 
   <name>CommonServices</name>
-  <url>http://maven.apache.org</url>
+  <description>Verts Common Services for Restful and JDBC Clients</description>
+  <url>https://fairbit.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <developers>
+    <developer>
+      <name>Shaikh Salman</name>
+      <email>shaykh.salman@fairbit.com</email>
+      <organization>Fairbit</organization>
+      <organizationUrl>https://www.fairbit.com</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+<connection>https://github.com/shaykhsalman/vertx-commonservices.git</connection>
+    <developerConnection>https://github.com/shaykhsalman/vertx-commonservices.git</developerConnection>
+    <url>https://www.fairbit.com</url>
+  </scm>
 
   <dependencies>
     <dependency>
@@ -79,4 +81,29 @@
       <version>2.8</version>
     </dependency>
   </dependencies>
+  <build>
+  <plugins>
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>license-maven-plugin</artifactId>
+      <version>1.14</version>
+      <executions>
+        <execution>
+          <id>download-licenses</id>
+          <goals>
+            <goal>download-licenses</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <configuration>
+        <source>1.8</source>
+        <target>1.8</target>
+      </configuration>
+    </plugin>
+  </plugins>
+  </build>
 </project>
