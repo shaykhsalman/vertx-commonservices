@@ -33,7 +33,6 @@ public class RestAPIVerticle extends BaseVerticle {
         Future<HttpServer> httpServerFuture = Future.future();
         HttpServerOptions httpServerOptions = new HttpServerOptions();
 
-
 //                .setKeyStoreOptions(new JksOptions().setPath("server.jks").setPassword("123456"));
 
         vertx.createHttpServer(httpServerOptions)

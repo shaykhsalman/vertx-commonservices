@@ -3,7 +3,7 @@
 
   <groupId>com.github.shaykhsalman</groupId>
   <artifactId>CommonServices</artifactId>
-  <version>1.2.4</version>
+  <version>1.2.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>CommonServices</name>
@@ -25,7 +25,7 @@
       <connection>scm:git:ssh:git@github.com:shaykhsalman/vertx-commonservices.git</connection>
       <developerConnection>scm:git:ssh:git@github.com:shaykhsalman/vertx-commonservices.git</developerConnection>
     <url>https://github.com/shaykhsalman/vertx-commonservices/tree/master</url>
-    <tag>CommonService</tag>
+    <tag>CommonServices</tag>
   </scm>
   <distributionManagement>
     <snapshotRepository>
