@@ -1,11 +1,13 @@
 package com.fairbit.commonservices.commonservices;
 
+import com.fairbit.commonservices.commonservices.BaseVerticle;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Future;
 import io.vertx.core.Handler;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerOptions;
+import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
@@ -18,6 +20,7 @@ import io.vertx.ext.web.sstore.ClusteredSessionStore;
 import io.vertx.ext.web.sstore.LocalSessionStore;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.BiConsumer;
@@ -218,8 +221,21 @@ public class RestAPIVerticle extends BaseVerticle {
         };
     }
 
+    protected void resultDataHandler(RoutingContext context, JsonObject data){
+        context.response().setStatusCode(200).putHeader("content-type", "application/json").end(data == null ? "" : data.toString());
+    }
+    protected void resultDataHandler(RoutingContext context, JsonArray data){
+        context.response().setStatusCode(200).putHeader("content-type", "application/json").end(data == null ? "" : data.toString());
+    }
+
     protected Handler<AsyncResult<Void>> resultVoidHandler(RoutingContext context, JsonObject result) {
         return resultVoidHandler(context, result, 200);
+    }
+    protected void resultDataHandler(RoutingContext context, List<JsonObject> data){
+        context.response().setStatusCode(200).putHeader("content-type", "application/json").end(data == null ? "" : data.toString());
+    }
+    protected void resultDataHandler(RoutingContext context, String data){
+        context.response().setStatusCode(200).putHeader("content-type", "application/text").end(data == null ? "" : data);
     }
 
     /**
