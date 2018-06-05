@@ -9,7 +9,6 @@
     <name>CommonServices</name>
     <description>Verts Common Services for Restful and JDBC Clients</description>
     <url>https://fairbit.com</url>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
