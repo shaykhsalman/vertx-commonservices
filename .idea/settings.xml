@@ -9,20 +9,20 @@
             <password>Letmeonly1n1:D2716.</password>
         </server>
     </servers>
-    <!--<activeProfiles>-->
-        <!--<activeProfile>CommonServices</activeProfile>-->
-    <!--</activeProfiles>-->
-    <!--<profiles>-->
-        <!--<profile>-->
-            <!--<id>ossrh</id>-->
-            <!--<activation>-->
-                <!--<activeByDefault>true</activeByDefault>-->
-            <!--</activation>-->
-            <!--<properties>-->
-                <!--<gpg.executable>gpg</gpg.executable>-->
-                <!--&lt;!&ndash;<gpg.keyname>80A11482DD9DF50DD884F433A1A2A25268681BAA</gpg.keyname>&ndash;&gt;-->
-                <!--<gpg.passphrase>Salman@123</gpg.passphrase>-->
-            <!--</properties>-->
-        <!--</profile>-->
-    <!--</profiles>-->
+    <activeProfiles>
+        <activeProfile>ossrh</activeProfile>
+    </activeProfiles>
+    <profiles>
+        <profile>
+            <id>ossrh</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <!--<gpg.keyname>80A11482DD9DF50DD884F433A1A2A25268681BAA</gpg.keyname>-->
+                <gpg.passphrase>Salman@123</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
 </settings>
